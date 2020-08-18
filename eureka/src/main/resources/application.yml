@@ -10,6 +10,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://212.64.16.147:3002/eureka
+    fetch-registry: false
+    register-with-eureka: false
   instance:
     hostname: lcoalhost
 
@@ -27,5 +29,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://212.64.16.147:3001/eureka
+    fetch-registry: false
+    register-with-eureka: false
   instance:
     hostname: lcoalhost
