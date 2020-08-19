@@ -3,6 +3,6 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 ARG JAR_FILE
-COPY ${JAR_FILE} /
+COPY ${JAR_FILE} springcloud.jar
 EXPOSE 3001
-ENTRYPOINT ["java","-jar","${JAR_FILE}"]
+ENTRYPOINT ["java","-jar","/springcloud.jar"]
