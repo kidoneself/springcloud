@@ -3,7 +3,7 @@
 FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 ARG JAR_FILE
-ENV port ${port}
 COPY ${JAR_FILE} springcloud.jar
-EXPOSE ${port}
+EXPOSE 3001
+EXPOSE 3002
 ENTRYPOINT ["java","-jar","/springcloud.jar"]
