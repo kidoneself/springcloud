@@ -1,0 +1,17 @@
+server:
+  port: 9501
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://212.64.16.147:3002/eureka,http://212.64.16.147:3001/eureka
+    registry-fetch-interval-seconds: 5
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 60
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+    hostname: localhost
+spring:
+  application:
+    name: provide01

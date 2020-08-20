@@ -9,9 +9,11 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://212.64.16.147:3002/eureka
+      defaultZone: http://lcoalhost:3002/eureka
   instance:
     hostname: lcoalhost
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
 
 ---
 
@@ -26,6 +28,8 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://212.64.16.147:3001/eureka
+      defaultZone: http://lcoalhost:3001/eureka
   instance:
     hostname: lcoalhost
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
